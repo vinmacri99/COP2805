@@ -65,7 +65,7 @@ public class GUIFrame extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnSearch.setBounds(67, 500, 90, 23);
+		btnSearch.setBounds(95, 500, 80, 23);
 		searchTab.add(btnSearch);
 		
 		JButton btnSearchClear = new JButton("Clear");
@@ -73,11 +73,11 @@ public class GUIFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnSearchClear.setBounds(167, 500, 90, 23);
+		btnSearchClear.setBounds(185, 500, 80, 23);
 		searchTab.add(btnSearchClear);
 		
 		JButton btnClose = new JButton("Close");
-		btnClose.setBounds(267, 500, 90, 23);
+		btnClose.setBounds(275, 500, 80, 23);
 		searchTab.add(btnClose);
 		
 		JLabel lblSearchResults = new JLabel("Search Results");
@@ -106,11 +106,11 @@ public class GUIFrame extends JFrame {
 		adminTab.add(searchableFiles);
 		
 		JButton btnBrowse = new JButton("Browse...");
-		btnBrowse.setBounds(118, 500, 90, 23);
+		btnBrowse.setBounds(128, 500, 80, 23);
 		adminTab.add(btnBrowse);
 		
 		JButton btnSettingsClear = new JButton("Clear...");
-		btnSettingsClear.setBounds(218, 500, 90, 23);
+		btnSettingsClear.setBounds(218, 500, 80, 23);
 		adminTab.add(btnSettingsClear);
 	}
 }
