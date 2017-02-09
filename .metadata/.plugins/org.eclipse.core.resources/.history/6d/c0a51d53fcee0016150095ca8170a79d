@@ -1,0 +1,7 @@
+package searchEngineProj;
+
+public class GUI_Window {
+	public static void main ( String[] args ) {
+		
+	}
+}

@@ -1,0 +1,57 @@
+package searchEngineProj;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+import java.awt.Button;
+import javax.swing.JInternalFrame;
+
+public class GUIFrame extends JFrame {
+
+	private JPanel contentPane;
+	private static final long serialVersionUID = 1L;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GUIFrame frame = new GUIFrame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public GUIFrame() {
+		setResizable(false);
+		setTitle("Search Engine");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 600);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		contentPane.add(tabbedPane, BorderLayout.CENTER);
+		
+		JTabbedPane userTab = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.addTab("Search", null, userTab, null);
+		
+		JTabbedPane adminTab = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.addTab("Settings", null, adminTab, null);
+	}
+
+}
