@@ -54,6 +54,11 @@ public class UserForm {
 		maintenance = new JButton("Maintenance");
 		maintenance.setFont(regularFont);
 		southPanel.add(maintenance);
+		// to add action listener 
+		maintenance.addActionListener(actionEvent -> {
+			JOptionPane.showMessageDialog(null, "Operation not supported", "Error Message", JOptionPane.OK_OPTION);
+
+		});
 		
 		// to add number of files label
 		numberOfFiles = new JLabel("This is dummy data for now");
@@ -64,7 +69,11 @@ public class UserForm {
 		about = new JButton("About");
 		about.setFont(regularFont);
 		southPanel.add(about);
-		
+		// to add action listener 
+		about.addActionListener(actionEvent -> {
+			JOptionPane.showMessageDialog(null, "Operation not supported", "Error Message", JOptionPane.OK_OPTION);
+
+		});
 		
 
 	}
