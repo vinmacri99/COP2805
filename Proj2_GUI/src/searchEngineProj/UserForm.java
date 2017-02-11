@@ -34,7 +34,7 @@ public class UserForm {
 		JPanel northPanel = new JPanel();
 		northPanel.setBackground(Color.BLUE);
 		northPanel.setPreferredSize(new Dimension(850, 200));
-		northPanel.setBorder(new EmptyBorder(0, 0, 10, 20));
+		northPanel.setBorder(new EmptyBorder(0, 0, 0, 20));
 		contentPane.add(northPanel, BorderLayout.NORTH);
 		
 		// to create and add the title to north panel
@@ -58,7 +58,7 @@ public class UserForm {
 		// to add search button
 		search = new JButton("Search");
 		search.setFont(regularFont);
-		search.setBorder(new EmptyBorder(50, 50, 50, 50));
+		search.setBorder(new EmptyBorder(40, 40, 40, 40));
 		search.setHorizontalAlignment(JButton.CENTER);
 		northPanel.add(search, BorderLayout.EAST);
 		
