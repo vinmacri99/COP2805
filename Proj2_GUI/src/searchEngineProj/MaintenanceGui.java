@@ -27,13 +27,20 @@ public class MaintenanceGui {
 		myFrame.setMinimumSize(new Dimension(950, 650));
 		myFrame.setVisible(true);
 		
+		// a container to place the panels in it
 		Container contentPane = myFrame.getContentPane();
 		JPanel northPanel = new JPanel();
 		northPanel.setBackground(Color.BLUE);
+		northPanel.setLayout(new BorderLayout());
 		northPanel.setPreferredSize(new Dimension(850, 100));
 		northPanel.setBorder(new EmptyBorder(0, 0, 0, 20));
 		contentPane.add(northPanel, BorderLayout.NORTH);
 		
+		// to create and add title label to north panel
+		title = new JLabel("My Search Engine - Maintenance");
+		title.setFont(titleFont);
+		title.setHorizontalAlignment(JLabel.CENTER);
+		northPanel.add(title, BorderLayout.CENTER);
 	}
 	
 }
