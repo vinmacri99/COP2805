@@ -56,7 +56,7 @@ public class UserForm {
 		southPanel.add(maintenance);
 		// to add action listener 
 		maintenance.addActionListener(actionEvent -> {
-			JOptionPane.showMessageDialog(null, "Operation not supported", "Error Message", JOptionPane.OK_OPTION);
+			JOptionPane.showMessageDialog(null, "Operation not yet supported", "Temporary Message", JOptionPane.OK_OPTION);
 
 		});
 		
