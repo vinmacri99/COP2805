@@ -63,8 +63,8 @@ public class UserForm {
 		
 		// to add action listener 
 		search.addActionListener(actionEvent -> {
-			JOptionPane.showMessageDialog(null, "Operation not yet supported", "Temporary Message", JOptionPane.OK_OPTION);
-
+			JOptionPane.showMessageDialog(null, "Operation not yet supported", 
+					"Temporary Message", JOptionPane.OK_OPTION);
 		});
 		
 		// a panel to hold the radio buttons
@@ -116,9 +116,7 @@ public class UserForm {
 		southPanel.add(maintenance);
 		// to add action listener 
 		maintenance.addActionListener(actionEvent -> {
-			//JOptionPane.showMessageDialog(null, "Operation not yet supported", "Temporary Message", JOptionPane.OK_OPTION);
 			MaintenanceGui admin = new MaintenanceGui();
-
 		});
 		
 		// to add number of files label
@@ -132,8 +130,8 @@ public class UserForm {
 		southPanel.add(about);
 		// to add action listener 
 		about.addActionListener(actionEvent -> {
-			JOptionPane.showMessageDialog(null, "Operation not supported", "Error Message", JOptionPane.OK_OPTION);
-
+			JOptionPane.showMessageDialog(null, "Operation not yet supported", 
+					"Temporary Message", JOptionPane.OK_OPTION);
 		});
 		southPanel.validate();
 		myFrame.pack();
