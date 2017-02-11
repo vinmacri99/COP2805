@@ -16,29 +16,88 @@ public class UserForm {
 	JRadioButton andSearch, orSearch, exactPhrase;
 	
 	public UserForm() {
-		Font titleFont = new Font("Serif", Font.BOLD, 36);
+		Font titleFont = new Font("Serif", Font.BOLD, 46);
 		Font regularFont = new Font("Serif", Font.PLAIN, 26);
 		
 		// to create the window frame
 		JFrame myFrame = new JFrame();
 		myFrame.setTitle("My Search Engine");
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		myFrame.setBounds(100, 100, 850, 700);
+		myFrame.setBounds(100, 100, 950, 700);
 		myFrame.setLayout(new BorderLayout());
-		myFrame.setMinimumSize(new Dimension(850, 700));
+		myFrame.setMinimumSize(new Dimension(950, 700));
 		myFrame.setVisible(true);
 				
 		// to create a panel for the main title
 		Container contentPane = myFrame.getContentPane();
 		JPanel northPanel = new JPanel();
 		northPanel.setBackground(Color.BLUE);
-		northPanel.setPreferredSize(new Dimension(850, 100));
+		northPanel.setPreferredSize(new Dimension(850, 200));
 		contentPane.add(northPanel, BorderLayout.NORTH);
+		((FlowLayout)northPanel.getLayout()).setHgap(80);
+		((FlowLayout)northPanel.getLayout()).setVgap(25);
 		
 		// to create and add the title to north panel
 		title = new JLabel("My Search Engine");
 		title.setFont(titleFont);
-		northPanel.add(title);
+		title.setHorizontalAlignment(JLabel.CENTER);
+		northPanel.setLayout(new BorderLayout(25, 25));
+		northPanel.add(title, BorderLayout.NORTH);
+		
+		// to add search label
+		searchItem = new JLabel("Search Term:");
+		searchItem.setFont(regularFont);
+		northPanel.add(searchItem, BorderLayout.WEST);
+		
+		// to add textField in north panel
+		input = new JTextField();
+		input.setFont(new Font("Serif", Font.PLAIN, 20));
+		northPanel.add(input, BorderLayout.CENTER);
+		
+		// to add search button
+		search = new JButton("Search");
+		search.setFont(regularFont);
+		search.setHorizontalAlignment(JButton.CENTER);
+		northPanel.add(search, BorderLayout.EAST);
+		
+		// to add action listener 
+		search.addActionListener(actionEvent -> {
+			JOptionPane.showMessageDialog(null, "Operation not yet supported", "Temporary Message", JOptionPane.OK_OPTION);
+
+		});
+		
+		// a panel to hold the radio buttons
+		JPanel groupRadioButtons = new JPanel();
+		groupRadioButtons.setPreferredSize(new Dimension(850, 50));
+		groupRadioButtons.setLayout(new FlowLayout());
+		groupRadioButtons.setBackground(Color.BLUE);
+		
+		((FlowLayout)groupRadioButtons.getLayout()).setHgap(35);
+		((FlowLayout)groupRadioButtons.getLayout()).setVgap(5);
+		
+				
+		andSearch = new JRadioButton("And Search", true);
+		andSearch.setFont(regularFont);
+		andSearch.setBackground(Color.BLUE);
+		orSearch = new JRadioButton("Or Search");
+		orSearch.setFont(regularFont);
+		orSearch.setBackground(Color.BLUE);
+		exactPhrase = new JRadioButton("Exact Phrase Search");
+		exactPhrase.setFont(regularFont);
+		exactPhrase.setBackground(Color.BLUE);
+		groupRadioButtons.add(andSearch);
+		groupRadioButtons.add(orSearch);
+		groupRadioButtons.add(exactPhrase);
+		
+		// so only one radio button can be selected
+		// at a time
+		ButtonGroup group = new ButtonGroup();
+		group.add(andSearch);
+		group.add(orSearch);
+		group.add(exactPhrase);
+		northPanel.add(groupRadioButtons, BorderLayout.SOUTH);
+				
+		northPanel.validate();
 		
 		// to create the south panel
 		JPanel southPanel = new JPanel();
@@ -74,8 +133,8 @@ public class UserForm {
 			JOptionPane.showMessageDialog(null, "Operation not supported", "Error Message", JOptionPane.OK_OPTION);
 
 		});
-		
-
+		southPanel.validate();
+		myFrame.pack();
 	}
 	
 	public static void main(String[] args) {
