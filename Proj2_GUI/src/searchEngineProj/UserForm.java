@@ -7,6 +7,7 @@ package searchEngineProj;
 
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 
 public class UserForm {
 	
@@ -34,8 +35,6 @@ public class UserForm {
 		northPanel.setBackground(Color.BLUE);
 		northPanel.setPreferredSize(new Dimension(850, 200));
 		contentPane.add(northPanel, BorderLayout.NORTH);
-		((FlowLayout)northPanel.getLayout()).setHgap(80);
-		((FlowLayout)northPanel.getLayout()).setVgap(25);
 		
 		// to create and add the title to north panel
 		title = new JLabel("My Search Engine");
@@ -47,6 +46,7 @@ public class UserForm {
 		// to add search label
 		searchItem = new JLabel("Search Term:");
 		searchItem.setFont(regularFont);
+		searchItem.setBorder(new EmptyBorder(15, 15, 15, 15));
 		northPanel.add(searchItem, BorderLayout.WEST);
 		
 		// to add textField in north panel
@@ -57,6 +57,7 @@ public class UserForm {
 		// to add search button
 		search = new JButton("Search");
 		search.setFont(regularFont);
+		search.setBorder(new EmptyBorder(50, 50, 50, 50));
 		search.setHorizontalAlignment(JButton.CENTER);
 		northPanel.add(search, BorderLayout.EAST);
 		
