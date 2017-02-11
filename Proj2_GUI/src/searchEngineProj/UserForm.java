@@ -34,6 +34,7 @@ public class UserForm {
 		JPanel northPanel = new JPanel();
 		northPanel.setBackground(Color.BLUE);
 		northPanel.setPreferredSize(new Dimension(850, 200));
+		northPanel.setBorder(new EmptyBorder(0, 0, 10, 20));
 		contentPane.add(northPanel, BorderLayout.NORTH);
 		
 		// to create and add the title to north panel
