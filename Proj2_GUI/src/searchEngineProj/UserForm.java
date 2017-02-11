@@ -24,7 +24,6 @@ public class UserForm {
 		JFrame myFrame = new JFrame();
 		myFrame.setTitle("My Search Engine");
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		myFrame.setBounds(100, 100, 950, 700);
 		myFrame.setLayout(new BorderLayout());
 		myFrame.setMinimumSize(new Dimension(950, 700));
 		myFrame.setVisible(true);
@@ -117,7 +116,8 @@ public class UserForm {
 		southPanel.add(maintenance);
 		// to add action listener 
 		maintenance.addActionListener(actionEvent -> {
-			JOptionPane.showMessageDialog(null, "Operation not yet supported", "Temporary Message", JOptionPane.OK_OPTION);
+			//JOptionPane.showMessageDialog(null, "Operation not yet supported", "Temporary Message", JOptionPane.OK_OPTION);
+			MaintenanceGui admin = new MaintenanceGui();
 
 		});
 		
