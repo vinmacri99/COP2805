@@ -21,7 +21,7 @@ public class GUIFrame extends JFrame {
 	private JTextField searchField;
 	private JTextField searchTextField;
 	/**
-	 * Launch the application.
+	 * Launch the application. sharon
 	 */
 	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
