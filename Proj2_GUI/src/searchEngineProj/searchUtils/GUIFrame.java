@@ -37,6 +37,7 @@ public class GUIFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
 		
+        // Search Tab controls
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		contentPane.add(tabbedPane);
 		
@@ -110,6 +111,7 @@ public class GUIFrame extends JFrame {
 		rdbtExactTerms.setBounds(294, 42, 109, 23);
 		searchTab.add(rdbtExactTerms);
 		
+        // Settings Tab controls 
 		JPanel adminTab = new JPanel();
 		tabbedPane.addTab("Settings", null, adminTab, null);
 		adminTab.setLayout(null);
