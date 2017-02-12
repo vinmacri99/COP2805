@@ -13,6 +13,8 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
 
 public class GUIFrame extends JFrame {
 
@@ -20,6 +22,7 @@ public class GUIFrame extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JTextField searchField;
 	private JTextField searchTextField;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 	/**
 	 * Launch the application.
 	 */
@@ -57,12 +60,15 @@ public class GUIFrame extends JFrame {
 		searchTab.setLayout(null);
 		
 		List resultsList = new List();
-		resultsList.setBounds(0, 65, 429, 429);
+		resultsList.setBounds(0, 98, 429, 396);
 		searchTab.add(resultsList);
 		
 		JButton btnSearch = new JButton("Search");
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+				// message box showing that code ran
+				
 			}
 		});
 		btnSearch.setBounds(67, 500, 90, 23);
@@ -71,17 +77,27 @@ public class GUIFrame extends JFrame {
 		JButton btnSearchClear = new JButton("Clear");
 		btnSearchClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				// Clear search criteria and search results
+				
 			}
 		});
 		btnSearchClear.setBounds(167, 500, 90, 23);
 		searchTab.add(btnSearchClear);
 		
 		JButton btnClose = new JButton("Close");
+		btnClose.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				// Close program
+				
+			}
+		});
 		btnClose.setBounds(267, 500, 90, 23);
 		searchTab.add(btnClose);
 		
 		JLabel lblSearchResults = new JLabel("Search Results");
-		lblSearchResults.setBounds(0, 43, 100, 20);
+		lblSearchResults.setBounds(0, 72, 100, 20);
 		searchTab.add(lblSearchResults);
 		
 		JLabel lblSearchCriteria = new JLabel("Search Criteria");
@@ -92,6 +108,23 @@ public class GUIFrame extends JFrame {
 		searchTextField.setBounds(0, 22, 429, 20);
 		searchTab.add(searchTextField);
 		searchTextField.setColumns(10);
+		
+		// Group radio buttons
+		
+			JRadioButton rdbtAllTerms = new JRadioButton("All of the terms");
+			buttonGroup.add(rdbtAllTerms);
+			rdbtAllTerms.setBounds(0, 42, 115, 23);
+			searchTab.add(rdbtAllTerms);
+			
+			JRadioButton rdbtAnyTerms = new JRadioButton("Any of the terms");
+			buttonGroup.add(rdbtAnyTerms);
+			rdbtAnyTerms.setBounds(139, 42, 144, 23);
+			searchTab.add(rdbtAnyTerms);
+			
+			JRadioButton rdbtExactTerms = new JRadioButton("Exact Phrase");
+			buttonGroup.add(rdbtExactTerms);
+			rdbtExactTerms.setBounds(294, 42, 109, 23);
+			searchTab.add(rdbtExactTerms);
 		
 		JPanel adminTab = new JPanel();
 		tabbedPane.addTab("Settings", null, adminTab, null);
@@ -106,10 +139,24 @@ public class GUIFrame extends JFrame {
 		adminTab.add(searchableFiles);
 		
 		JButton btnBrowse = new JButton("Browse...");
+		btnBrowse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				// Invokes file management and loads files into files list
+				
+			}
+		});
 		btnBrowse.setBounds(118, 500, 90, 23);
 		adminTab.add(btnBrowse);
 		
 		JButton btnSettingsClear = new JButton("Clear...");
+		btnSettingsClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				// Clear file list
+				
+			}
+		});
 		btnSettingsClear.setBounds(218, 500, 90, 23);
 		adminTab.add(btnSettingsClear);
 	}
