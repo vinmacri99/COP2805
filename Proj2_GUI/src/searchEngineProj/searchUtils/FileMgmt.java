@@ -1,5 +1,5 @@
-package searchEngineProj;
+package searchEngineProj.searchUtils;
 
 public class FileMgmt {
-
+	
 }

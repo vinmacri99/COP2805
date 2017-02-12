@@ -1,4 +1,4 @@
-package searchEngineProj;
+package searchEngineProj.searchUtils;
 
 import java.awt.EventQueue;
 import java.awt.GridLayout;
@@ -24,24 +24,9 @@ public class GUIFrame extends JFrame {
 	private JTextField searchTextField;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					GUIFrame frame = new GUIFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
+	
 	public GUIFrame() {
 		setResizable(false);
 		setTitle("Search Engine");
@@ -109,30 +94,29 @@ public class GUIFrame extends JFrame {
 		searchTab.add(searchTextField);
 		searchTextField.setColumns(10);
 		
-		// Group radio buttons
+		JRadioButton rdbtAllTerms = new JRadioButton("All of the terms");
+		rdbtAllTerms.setSelected(true);
+		buttonGroup.add(rdbtAllTerms);
+		rdbtAllTerms.setBounds(0, 42, 115, 23);
+		searchTab.add(rdbtAllTerms);
 		
-			JRadioButton rdbtAllTerms = new JRadioButton("All of the terms");
-			buttonGroup.add(rdbtAllTerms);
-			rdbtAllTerms.setBounds(0, 42, 115, 23);
-			searchTab.add(rdbtAllTerms);
-			
-			JRadioButton rdbtAnyTerms = new JRadioButton("Any of the terms");
-			buttonGroup.add(rdbtAnyTerms);
-			rdbtAnyTerms.setBounds(139, 42, 144, 23);
-			searchTab.add(rdbtAnyTerms);
-			
-			JRadioButton rdbtExactTerms = new JRadioButton("Exact Phrase");
-			buttonGroup.add(rdbtExactTerms);
-			rdbtExactTerms.setBounds(294, 42, 109, 23);
-			searchTab.add(rdbtExactTerms);
+		JRadioButton rdbtAnyTerms = new JRadioButton("Any of the terms");
+		buttonGroup.add(rdbtAnyTerms);
+		rdbtAnyTerms.setBounds(139, 42, 144, 23);
+		searchTab.add(rdbtAnyTerms);
+		
+		JRadioButton rdbtExactTerms = new JRadioButton("Exact Phrase");
+		buttonGroup.add(rdbtExactTerms);
+		rdbtExactTerms.setBounds(294, 42, 109, 23);
+		searchTab.add(rdbtExactTerms);
 		
 		JPanel adminTab = new JPanel();
 		tabbedPane.addTab("Settings", null, adminTab, null);
 		adminTab.setLayout(null);
 		
-		List list = new List();
-		list.setBounds(0, 20, 429, 474);
-		adminTab.add(list);
+		List fileList = new List();
+		fileList.setBounds(0, 20, 429, 474);
+		adminTab.add(fileList);
 		
 		JLabel searchableFiles = new JLabel("File List");
 		searchableFiles.setBounds(0, 0, 100, 20);
