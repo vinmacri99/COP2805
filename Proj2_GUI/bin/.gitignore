@@ -1,1 +1,6 @@
 /searchEngineProj/
+/bin
+/.classpath
+/.project
+/.settings
+/target
