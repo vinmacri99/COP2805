@@ -12,7 +12,16 @@ public class InvertedIndex {
     public void setFiles() {
         // set files and display them in fileList
     }
+    public void addFileToList() {
+        // this is optional 
+        // will need to add button if we want multiple files to search
+    }
     
     // clearing files for new search data
-    public void clear
+    // note: this does not clear the search field in the Search Tab
+    public void clearFileList() {
+        
+    }
+    
+    
 }
