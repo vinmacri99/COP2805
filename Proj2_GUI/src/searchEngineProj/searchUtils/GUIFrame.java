@@ -1,20 +1,19 @@
 package searchEngineProj.searchUtils;
 
-import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JRadioButton;
-import javax.swing.ButtonGroup;
 
 public class GUIFrame extends JFrame {
 
@@ -52,7 +51,7 @@ public class GUIFrame extends JFrame {
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				// message box showing that code ran
+				// populate search results with comment stating "in testing"
 				
 			}
 		});
