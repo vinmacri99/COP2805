@@ -19,7 +19,6 @@ public class GUIFrame extends JFrame {
 
 	private JPanel contentPane;
 	private static final long serialVersionUID = 1L;
-	private JTextField searchField;
 	private JTextField searchTextField;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	/**
