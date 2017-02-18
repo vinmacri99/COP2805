@@ -2,28 +2,43 @@ package searchEngineProj.searchUtils;
 
 import java.io.*;
 import java.io.IOException;
+import java.lang.*;
 
 public class InvertedIndex  {
-    // stub for SearchEngine.java
     
-    // create the file object
-    File
+    // variable declarations
+    String sourceFile;
+    String targetIndexFiles;
     
-    // note: this is from the Button click event in FileMgmt.java
-    //     the click event will get and set files
-    public void getFiles() {
-        // read data from a file and save in
+    // create constructor
+    public void InvertedIndex() {
+    
     }
-    public void setFiles() {
-        // set files and display them in fileList
+    
+    // Add sourceFile to the targetIndexFiles
+    public void addDataToIndex() {
+        
     }
-    public void addFileToList() {
-        // this is optional 
-        // will need to add button if we want multiple files to search
+    
+    // Remove a file from targetIndexFiles
+    public void removeDataFromIndex() {
+        
     }
+    
+    // Read targetIndexFiles
+    public void readIndexFile() {
+        
+    }
+    
+    // write targetIndexFiles to Settings Window: fileList
+    public void writeFileToWindow() {
+        // this is a list of files that show up in Settiings Window
+    }
+
+   
     
     // clearing files for new search data
-    // note: this does not clear the search field in the Search Tab
+    // note: this does not clear the search field in the Search Window
     public void clearFileList() {
         
     }
