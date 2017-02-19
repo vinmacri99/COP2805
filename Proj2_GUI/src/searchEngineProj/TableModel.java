@@ -14,6 +14,9 @@ public class TableModel extends AbstractTableModel{
 	public int getRowCount() {
 		return 0;
 	}
+	public void setColumnName(String[] ColumnNames) {
+		this.columnNames = ColumnNames;
+	}
 	
 	public String getColumnName(int col) {
 		return columnNames[col];
@@ -22,7 +25,7 @@ public class TableModel extends AbstractTableModel{
 	@Override
 	public int getColumnCount() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 2;
 	}
 
 	@Override

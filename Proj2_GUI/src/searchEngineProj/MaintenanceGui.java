@@ -41,15 +41,24 @@ public class MaintenanceGui {
 		title.setFont(titleFont);
 		title.setHorizontalAlignment(JLabel.CENTER);
 		northPanel.add(title, BorderLayout.CENTER);
-		
+
 		// TODO create table and add it to center panel
 		JPanel centerPanel = new JPanel();
 		centerPanel.setBackground(Color.WHITE);
 		centerPanel.setPreferredSize(new Dimension(850, 400));
-		contentPane.add(centerPanel, BorderLayout.CENTER);
 		
+		TableModel myTableModel = new TableModel();
+		JTable table = new JTable(myTableModel);
+		table.getTableHeader().setFont(regularFont);
+		// to make the table expand the whole pane
+		table.setFillsViewportHeight(true);
+		
+		centerPanel.setLayout(new BorderLayout());
+		centerPanel.add(table, BorderLayout.CENTER);
+		centerPanel.add(table.getTableHeader(), BorderLayout.NORTH);
+		contentPane.add(centerPanel, BorderLayout.CENTER);
 
-		// to create and add south panel
+		// to create the south panel
 		JPanel southPanel = new JPanel();
 		southPanel.setBackground(Color.BLUE);
 		southPanel.setLayout(new FlowLayout());
