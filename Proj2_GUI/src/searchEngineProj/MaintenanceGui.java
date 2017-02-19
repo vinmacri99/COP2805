@@ -43,7 +43,10 @@ public class MaintenanceGui {
 		northPanel.add(title, BorderLayout.CENTER);
 		
 		// TODO create table and add it to center panel
-		
+		JPanel centerPanel = new JPanel();
+		centerPanel.setBackground(Color.WHITE);
+		centerPanel.setPreferredSize(new Dimension(850, 400));
+		contentPane.add(centerPanel, BorderLayout.CENTER);
 		
 
 		// to create and add south panel
