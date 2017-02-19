@@ -67,18 +67,7 @@ package searchEngineProj;
 	       }
 	        );
 	}
-	     // main method
-
-//	     public static void main(String [] args) {
-//	            GuiMaint maintbox = new GuiMaint();
-//	            maintbox.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-//	            maintbox.setSize(400, 300);
-//	            maintbox.setTitle("A-Team Search Engine File Maintenance");
-//	            maintbox.setLocationRelativeTo( null );  // Center the screen.
-//	            maintbox.getContentPane();
-//	            maintbox.setVisible( true );
-//	            
-//	     }  //  end main method
+	   
 
 	         }   //  end GuiMaint class
 
@@ -86,8 +75,4 @@ package searchEngineProj;
 
 	//end program          
 	        
-
-	//to compile: javac -cp .;utils.jar GuiMaint.java     
-
-	//to execute: java -cp .;utils.jar GuiMaint    
 
