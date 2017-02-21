@@ -1,1 +1,3 @@
-"# COP2805" 
+# COP2805
+-------------
+Search Engine Project
