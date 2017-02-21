@@ -1,4 +1,5 @@
-/** @author Flavio Aquino February 2017
+/** @author Flavio Aquino, Sharon Tender, Frank Castillo,
+ * Vinny Macri February 2017
  * 
  *  Class responsible for creating the  Administrator
  *  GUI.
