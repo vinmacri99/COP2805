@@ -1,27 +1,77 @@
+/** @author Flavio Aquino, Sharon Tender, Frank Castillo,
+ * Vinny Macri February 2017
+ */
+
 package searchEngineProj.searchUtils;
 
-public class InvertedIndex {
-    // stub for SearchEngine.java
+import java.io.*;
+import java.io.IOException;
+import java.lang.*;
+
+public class InvertedIndex  {
     
-    // load files to be searched
-    // note: this is from the Button click event in FileMgmt.java
-    //     the click event will get and set files
-    public void getFiles() {
+    // variables: s will change as we work on the methods
+    String s;
+    
+    // create constructor
+    public void InvertedIndex() {
+    
+    }
+
+	///////  FILE MAINTENANCE METHODS  ///////  
+	
+    // Add sourceFile to the targetIndexFiles
+    public void addFileToIndex() {
         
     }
-    public void setFiles() {
-        // set files and display them in fileList
+    
+    // Remove a file from targetIndexFiles
+    public void removeFileFromIndex() {
+        
     }
-    public void addFileToList() {
-        // this is optional 
-        // will need to add button if we want multiple files to search
+    
+    // Read targetIndexFiles
+    public void readIndexFile() {
+        
+    }
+    
+    // write targetIndexFiles to Maintenance Window: fileList
+    public void writeFileToWindow() {
+        
     }
     
     // clearing files for new search data
-    // note: this does not clear the search field in the Search Tab
-    public void clearFileList() {
+    // note: this will also need to clear the search results in the Search Window
+    public void removeFileList() {
         
     }
-    
-    
+	
+	///////  SEARCH WINDOW METHODS  ///////
+	
+	// method for displaying data (SEARCH window)
+	public String displayData() {
+		return s;
+	}  
+
+	
+	///////  SEARCH METHODS  ///////
+	// Search AND
+	public String andIndexSearch() {
+		return s;
+	}
+	
+	// Search OR
+	public String orIndexSearch() {
+		return s;
+	}
+	
+	// Search PHRASE
+	public String phraseIndexSearch() {
+		return s;
+	}	
+	
+    // close file 
+    public void closeFile(){
+        
+    }
 }
