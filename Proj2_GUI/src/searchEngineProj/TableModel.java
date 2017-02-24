@@ -10,7 +10,7 @@ public class TableModel extends AbstractTableModel{
 	private static final long serialVersionUID = 1L;
 
 	private String[] columnNames = {"File Name", "Status"};
-	// TODO add the rest of the attributes 
+	
 	
 	public int getRowCount() {
 		return 0;
