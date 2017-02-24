@@ -19,7 +19,7 @@ package searchEngineProj;
 	import javax.swing.JFrame;
 	import javax.swing.JLabel;
 	import javax.swing.JTextArea;
-import searchEngineProj.searchUtils.GuiMaint;
+        import searchEngineProj.searchUtils.GuiMaint;
 
 //	import utils.*;
 
