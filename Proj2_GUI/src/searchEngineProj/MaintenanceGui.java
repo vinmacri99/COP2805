@@ -43,7 +43,7 @@ public class MaintenanceGui {
 		title.setHorizontalAlignment(JLabel.CENTER);
 		northPanel.add(title, BorderLayout.CENTER);
 
-		// TODO create table and add it to center panel
+		
 		JPanel centerPanel = new JPanel();
 		centerPanel.setBackground(Color.WHITE);
 		centerPanel.setPreferredSize(new Dimension(850, 400));
