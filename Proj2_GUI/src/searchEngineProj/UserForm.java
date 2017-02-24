@@ -115,7 +115,7 @@ public class UserForm {
 		maintenance = new JButton("Maintenance");
 		maintenance.setFont(regularFont);
 		southPanel.add(maintenance);
-		// to add action listener 
+		// to add action listener to add button
 		maintenance.addActionListener(actionEvent -> {
 			MaintenanceGui admin = new MaintenanceGui();
 		});
