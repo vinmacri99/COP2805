@@ -8,9 +8,9 @@ package searchEngineProj;
 
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
+import javax.swing.border.EmptyBorder;     
 
-public class UserForm {
+public class UserForm extends JFrame {
 	
 	JLabel title, searchItem, numberOfFiles, ouputTitle, output;
 	JTextField input;
@@ -75,8 +75,7 @@ public class UserForm {
 		groupRadioButtons.setBackground(Color.BLUE);
 		
 		((FlowLayout)groupRadioButtons.getLayout()).setHgap(35);
-		((FlowLayout)groupRadioButtons.getLayout()).setVgap(5);
-		
+		((FlowLayout)groupRadioButtons.getLayout()).setVgap(5);		
 				
 		andSearch = new JRadioButton("And Search", true);
 		andSearch.setFont(regularFont);
@@ -136,9 +135,5 @@ public class UserForm {
 		});
 		southPanel.validate();
 		myFrame.pack();
-	}
-	
-	public static void main(String[] args) {
-		UserForm testGui = new UserForm();
-	}
+	}	
 }
