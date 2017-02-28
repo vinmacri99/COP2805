@@ -10,11 +10,16 @@ package searchEngineProj;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import java.io.*;
+import searchEngineProj.FileMgmt;
+import javax.swing.JFileChooser;
+import java.util.Scanner;
+
 
 public class MaintenanceGui {
 	JLabel title, numberOfFiles;
 	JButton addFile, updateFile, removeFile;
-	JTable table;
+	public JTable table;                       // public for other classes to acces it?
 	
 	public MaintenanceGui() {
 		Font titleFont = new Font("Serif", Font.BOLD, 46);
@@ -42,7 +47,6 @@ public class MaintenanceGui {
 		title.setFont(titleFont);
 		title.setHorizontalAlignment(JLabel.CENTER);
 		northPanel.add(title, BorderLayout.CENTER);
-
 		
 		JPanel centerPanel = new JPanel();
 		centerPanel.setBackground(Color.WHITE);
@@ -73,9 +77,16 @@ public class MaintenanceGui {
 		addFile.setFont(regularFont);
 		southPanel.add(addFile);
 		
-		addFile.addActionListener(actionEvent -> {
-			JOptionPane.showMessageDialog(null, "Operation not yet available", 
-					"Temporaty Message", JOptionPane.OK_OPTION);
+        // button event adds a file to Search Engine
+		addFile.addActionListener(actionEvent -> {  
+            try {
+                FileMgmt addSearchFile = new FileMgmt();
+                addSearchFile.addFileToIndex();
+            } catch (IndexOutOfBoundsException e) {
+                System.err.println("IndexOutOfBoundsException: " + e.getMessage());
+            } catch (IOException e) {
+                System.err.println("Caught IOException: " + e.getMessage());
+            }
 		});
 		
 		updateFile = new JButton("Update Index File");

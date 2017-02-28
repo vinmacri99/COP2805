@@ -32,7 +32,13 @@ public class InvertedIndex  {
 	// Search PHRASE
 	public String phraseIndexSearch() {
 		return s;
-	}	
+	}
+    
+    // method for displaying search results in SEARCH window
+	public String displayData() {
+        String s = "";
+		return s;
+	}
 	
     // close file 
     public void closeFile(){
