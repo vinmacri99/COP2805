@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 
 public class MaintenanceGui {
-	JLabel title, numberOfFiles;
+	JLabel title, numberOfFiles, filePath;     // filePath added to display files being searched
 	JButton addFile, updateFile, removeFile;
 	public JTable table;                       // public for other classes to acces it?
 	
@@ -57,7 +57,13 @@ public class MaintenanceGui {
 		table.getTableHeader().setFont(regularFont);
 		// to make the table expand the whole pane
 		table.setFillsViewportHeight(true);
+        
+        // lable to display the path of the file for searching JTextArea, JTable, JList
+        filePath = new JLabel("c:path//for//textFile.txt");
 		
+        // set the label to display
+        table.add(filePath);
+        
 		centerPanel.setLayout(new BorderLayout());
 		centerPanel.add(table, BorderLayout.CENTER);
 		centerPanel.add(table.getTableHeader(), BorderLayout.NORTH);
