@@ -11,7 +11,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.io.*;
-import searchEngineProj.FileMgmt;
+import searchEngineProj.FileMgmt.*;
 import javax.swing.JFileChooser;
 import java.util.Scanner;
 
@@ -33,7 +33,7 @@ public class MaintenanceGui {
 		myFrame.setMinimumSize(new Dimension(950, 650));
 		myFrame.setVisible(true);
 		
-		// a container to place the panels in it
+		// to create a container to place the north panel into for Heading
 		Container contentPane = myFrame.getContentPane();
 		JPanel northPanel = new JPanel();
 		northPanel.setBackground(Color.BLUE);
@@ -48,27 +48,52 @@ public class MaintenanceGui {
 		title.setHorizontalAlignment(JLabel.CENTER);
 		northPanel.add(title, BorderLayout.CENTER);
 		
+        
+        
+        
+        
+        
+        
+        //////  THE AREA BELOW IS WHERE I AM WORKING  /////////        
+        
+        
+        
+
+        
+        // panel for the search file names and status
 		JPanel centerPanel = new JPanel();
 		centerPanel.setBackground(Color.WHITE);
 		centerPanel.setPreferredSize(new Dimension(850, 400));
-		
+		centerPanel.setLayout(new BorderLayout());        
+
+        filePath = new JLabel("fileaddress");        // For testing: lable to display the path of the file for searching JTextArea, JTable, JList
+        
 		TableModel myTableModel = new TableModel();
 		JTable table = new JTable(myTableModel);
 		table.getTableHeader().setFont(regularFont);
-		// to make the table expand the whole pane
-		table.setFillsViewportHeight(true);
-        
-        // lable to display the path of the file for searching JTextArea, JTable, JList
-        filePath = new JLabel("c:path//for//textFile.txt");
+		table.setFillsViewportHeight(true);	         // to make the table expand the whole pane
 		
-        // set the label to display
-        table.add(filePath);
-        
-		centerPanel.setLayout(new BorderLayout());
 		centerPanel.add(table, BorderLayout.CENTER);
 		centerPanel.add(table.getTableHeader(), BorderLayout.NORTH);
 		contentPane.add(centerPanel, BorderLayout.CENTER);
+        centerPanel.add(filePath, BorderLayout.WEST);       // WEST was the best way to get it to show up
 
+        
+        
+        
+        
+        
+        
+        
+        //////  THE AREA ABOVE IS WHERE I AM WORKING  /////////        
+        
+        
+        
+        
+        
+        
+
+        
 		// to create the south panel
 		JPanel southPanel = new JPanel();
 		southPanel.setBackground(Color.BLUE);

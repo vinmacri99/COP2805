@@ -13,15 +13,6 @@ public class TableModel extends AbstractTableModel{
 	private String[] columnNames = {"File Name", "Status"};
 	String files;
     
-//    // constructor
-//    public TableModel() {
-//        try {
-//            files = fileNameList.getAll();   //need to create a fileNameList.txt file 
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        } 
-//    }
-	
 	public int getRowCount() {
 		return 0;
 	}
@@ -47,7 +38,7 @@ public class TableModel extends AbstractTableModel{
             case 0: 
                 return "a/file/test.txt";   //files.get(rowIndex).getFileName();
             case 1:
-                return  "a/file/test2.txt";   //files.get(rowIndex).getStatus();
+                return  "status";   //files.get(rowIndex).getStatus();
             default:
                 return null;
         }

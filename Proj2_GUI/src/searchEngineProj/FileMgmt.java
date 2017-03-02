@@ -4,19 +4,17 @@ import java.util.Scanner;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileMgmt {
-	
+	public String filePath;
     // default constructor
     public FileMgmt() throws IOException { 
         // read the index data from a file at startup into memory
-//        File startupFile = new File("search_data.txt");
-//        if (!startupFile.exists()) {
-//            JOptionPane.showMessageDialog(null, "File not found.", 
-//                "Error", JOptionPane.OK_OPTION); 
-//        }
+
     }
     
     	///////  FILE MAINTENANCE METHODS  ///////  
@@ -29,18 +27,25 @@ public class FileMgmt {
 
             //get selected file, store path in a string, call method to write path to Maint. window
             File file = fileChooser.getSelectedFile();
-            String filePath = file.getPath();
-            writeFileToWindow(filePath);          // this method is below
-
+            filePath = file.getPath();
+            writeFileToWindow(filePath);                   // this method is below, has not been created yet
+            
             // get new file and save it in an array for indexing
-            saveFilePathForSearching(filePath);          
+            saveFilePathForSearching(filePath);            // this method is below, has not been created yet
 
-            // create a Scanner for the file (PrintWindow for output)
+            // create target file and see if it exists
+            File output = new File("Output.txt");
+            System.out.println(output.getPath());
+            // 
+            PrintWriter copyFile = new PrintWriter(
+                                   new BufferedWriter(
+                                   new FileWriter(output)));
+            
+            // FOR TESTING: create a Scanner for the file this is for printing to the console
             Scanner input = new Scanner(file);
-
-            // read text from the file
             while (input.hasNext() ) {
-                
+                String line = input.nextLine();
+                System.out.println(line);                
             }
             input.close();
         }
@@ -65,18 +70,13 @@ public class FileMgmt {
     
     // save file in array for searching with InvertedIndex.java
     public void saveFilePathForSearching(String s) {
-        
+//        File[] fileListing = s;  // save the list of files in an array
+//        fileListing.listFiles() //File[] listFiles() Returns an array of abstract pathnames denoting the files in the directory denoted by this abstract pathname.
     }
     
     // write file path to display in maintenance window
-    public void writeFileToWindow(String s) {
-
-        // display results in maintenance window
-        //MaintenanceGui.displayName(s);
-        
-        // temporary console output for testing
-        System.out.println(s);
-
+    public void writeFileToWindow(String s) {        
+        System.out.println(s);                      // temporary console output for testing
     }
     
     // clearing files for new search data
