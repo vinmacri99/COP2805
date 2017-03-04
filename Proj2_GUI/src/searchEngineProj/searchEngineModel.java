@@ -12,28 +12,29 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class searchEngineModel {
 
 	private String indexData = "..\\..\\resources\\indexData.txt";
 	
 	
-	public void writeData(HashMap<String, HashMap<Integer, Integer>> outerMap, 
-			HashMap<Integer, Integer> innerMap) {
+	public void writeData(HashMap<String, Set<Integer>> invertedIndex) {
 		
 		try {
 			// to create a decorated FileOutputSream
+			@SuppressWarnings("resource")
 			PrintWriter out = new PrintWriter(
 					new OutputStreamWriter(
 							new FileOutputStream(indexData)));
 			
-			// Not sure if this is how is done yet
-			for (String key: outerMap.keySet()) {
-				out.printf("%s:", outerMap.get(key));
-				for(Integer innerKey: innerMap.keySet()) {
-					out.printf(" (%d,%d)", innerMap.get(innerKey));
-				}
-				out.printf("\n");
+			// To iterate over the HashMap
+			for(HashMap.Entry<String, Set<Integer>> entry: invertedIndex.entrySet()) {
+				// To iterate over each entry
+				for(Integer documentAndPosition: entry.getValue()) {
+					out.println(entry.getKey() + ": " + documentAndPosition + ", ");
+				}				
 			}
 			
 		} catch (FileNotFoundException e) {
