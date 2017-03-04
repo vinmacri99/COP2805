@@ -17,9 +17,12 @@ import java.util.Set;
 
 public class searchEngineModel {
 
-	private String indexData = "..\\..\\resources\\indexData.txt";
+	private String indexData = System.getProperty("..\\..\\resources\\indexData.txt");
 	
-	
+	/** A method to save a HahsMap into a file
+	 *  @param HashMap<String, Set<Integer>> invertedIndex takes
+	 *  a HashMap with a set for the values as a parameter
+	 */
 	public void writeData(HashMap<String, Set<Integer>> invertedIndex) {
 		
 		try {
