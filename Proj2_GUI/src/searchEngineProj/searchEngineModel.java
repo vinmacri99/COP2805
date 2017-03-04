@@ -12,7 +12,6 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 public class searchEngineModel {
@@ -27,7 +26,6 @@ public class searchEngineModel {
 		
 		try {
 			// to create a decorated FileOutputSream
-			@SuppressWarnings("resource")
 			PrintWriter out = new PrintWriter(
 					new OutputStreamWriter(
 							new FileOutputStream(indexData)));
