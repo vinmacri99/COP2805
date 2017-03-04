@@ -39,12 +39,12 @@ public class searchEngineModel {
 					out.println(entry.getKey() + ": " + documentAndPosition + ", ");
 				}				
 			}
+			out.close();
 			
 		} catch (FileNotFoundException e) {
 			System.err.printf("Cannot open %s", indexData);
 			e.printStackTrace();
-		}
-		
-		
+
+		} 
 	}
 }
